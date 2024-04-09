@@ -91,34 +91,7 @@ class TailorApi(APIView ):
 
 
 
-"""
-assumimg we have model called Tialor in my django models.py 
-with the following fields
 
-class Tailor(models.Model):
-    profile = models.ForeignKey('Profile', on_delete=models.CASCADE)
-    company = models.ForeignKey(FashionCompany, on_delete=models.CASCADE)
-    name = models.CharField(max_length=200, null=True, blank=True)
-    email = models.CharField(max_length=200, blank=True, null=True)
-    wallet = models.DecimalField(max_digits=7,decimal_places=2, null=True, blank=True, default=0.0)
-    total_work=models.IntegerField(default=0)
-    total_pending_work=models.IntegerField(default=0)
-    createdAt = models.DateTimeField(auto_now_add=True)
-    _id = models.AutoField(primary_key=True, editable=False)
-
-
-    def __str__(self):
-        return self.name
-
-generate the django drf code to archive the following functions using best practices also not only isAdmin user should allow to make the request,
-- get all Tailor objects
-- get tailor by id
-- add new tailor
-- delete tailor
-- update tailor
-
-"""
-        
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
